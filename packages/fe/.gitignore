@@ -1,0 +1,6 @@
+.svelte-kit
+build
+dist
+src/lib/i18n/i18n-types.ts
+.env
+.env.*

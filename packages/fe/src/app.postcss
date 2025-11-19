@@ -1,0 +1,24 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+
+:root {
+}
+
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	-webkit-tap-highlight-color: transparent;
+}
+
+* {
+	outline: none;
+}
+
+/* NUMBER INPUT REMOVE ARROWS */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
