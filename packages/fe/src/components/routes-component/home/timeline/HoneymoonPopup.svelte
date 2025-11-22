@@ -15,7 +15,18 @@
 		ibanNote: string;
 	}
 
-	let { isOpen = false, onClose, date, title, description, giftMessage, giftDescription, ibanLabel, ibanValue, ibanNote }: Props = $props();
+	let {
+		isOpen = false,
+		onClose,
+		date,
+		title,
+		description,
+		giftMessage,
+		giftDescription,
+		ibanLabel,
+		ibanValue,
+		ibanNote,
+	}: Props = $props();
 
 	let ibanCopied = $state(false);
 
@@ -54,24 +65,27 @@
 
 		<!-- IBAN section -->
 		<div class="rounded-lg bg-white p-4 shadow-sm">
-			<p class="mb-2 text-sm font-medium text-gray-600">{ibanLabel}</p>
+			<p class="mb-2 text-base font-medium text-gray-600">{ibanLabel}</p>
 
 			<div class="flex items-center gap-2">
-				<code
-					class="flex-1 rounded bg-gray-100 px-3 py-2 font-mono text-sm font-semibold text-gray-800"
-				>
+				<code class="flex-1 rounded bg-gray-100 px-3 py-2 font-mono text-base font-semibold text-gray-800">
 					{ibanValue}
 				</code>
 
 				<button
 					onclick={copyIban}
-					class="rounded-lg bg-amber-600 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-amber-700 active:scale-95"
+					class="rounded-lg bg-amber-600 px-4 py-2 text-base font-medium text-white transition-all hover:bg-amber-700 active:scale-95"
 					aria-label={$LL.ui.copyIban()}
 				>
 					{#if ibanCopied}
 						<span class="flex items-center gap-1">
 							<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M5 13l4 4L19 7"
+								/>
 							</svg>
 							{$LL.ui.ibanCopied()}
 						</span>

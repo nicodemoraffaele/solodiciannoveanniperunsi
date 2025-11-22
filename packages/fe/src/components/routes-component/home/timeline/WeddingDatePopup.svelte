@@ -36,18 +36,18 @@
 			</div>
 
 			{#if church.imageUrl}
-				<div class="mb-4 overflow-hidden rounded-lg">
+				<div class="mb-4 rounded-lg">
 					<img src={church.imageUrl} alt={church.name} class="h-48 w-full object-cover" />
 				</div>
 			{/if}
 
-			<div class="space-y-2 text-sm">
+			<div class="space-y-2 text-base">
 				<p class="font-medium text-gray-800">{church.name}</p>
 				<p class="text-gray-600">{church.address}</p>
 				<p class="font-semibold text-pink-600">{church.time}</p>
 			</div>
 
-			<p class="mt-4 text-sm leading-relaxed text-gray-700">{church.description}</p>
+			<p class="mt-4 text-base leading-relaxed text-gray-700">{church.description}</p>
 		</div>
 
 		<!-- Reception Section -->
@@ -65,18 +65,35 @@
 			</div>
 
 			{#if reception.imageUrl}
-				<div class="mb-4 overflow-hidden rounded-lg">
+				<div class="mb-4 rounded-lg">
 					<img src={reception.imageUrl} alt={reception.name} class="h-48 w-full object-cover" />
 				</div>
 			{/if}
 
-			<div class="space-y-2 text-sm">
+			<div class="space-y-2 text-base">
 				<p class="font-medium text-gray-800">{reception.name}</p>
 				<p class="text-gray-600">{reception.address}</p>
 				<p class="font-semibold text-purple-600">{reception.time}</p>
 			</div>
 
-			<p class="mt-4 text-sm leading-relaxed text-gray-700">{reception.description}</p>
+			<p class="mt-4 text-base leading-relaxed text-gray-700">{reception.description}</p>
 		</div>
+	</div>
+
+	<!-- RSVP Section -->
+	<div class="mt-8 rounded-xl border-2 bg-gradient-to-br from-pink-50 to-purple-50 p-6 text-center" style="border-color: #C17557;">
+		<h3 class="mb-3 text-2xl font-semibold" style="font-family: 'Pinyon Script', cursive; color: #7A8B7F;">
+			Conferma la tua presenza
+		</h3>
+		<p class="mb-6 text-base leading-relaxed" style="font-family: 'Cormorant Garamond', serif; color: #5A6B5F;">
+			Saremmo felici di averti con noi in questo giorno speciale. Ti preghiamo di confermare la tua presenza e comunicarci eventuali esigenze alimentari.
+		</p>
+		<a
+			href="/rsvp"
+			class="inline-block rounded-full px-8 py-3 text-lg font-semibold text-white transition-all hover:shadow-lg"
+			style="background: linear-gradient(135deg, #7A8B7F 0%, #8B9F8C 100%); font-family: 'Cormorant Garamond', serif;"
+		>
+			Compila il modulo RSVP
+		</a>
 	</div>
 </DatePopup>

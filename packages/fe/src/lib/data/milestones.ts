@@ -8,27 +8,27 @@ import type { MilestonePosition, MilestoneType } from '$lib/types/milestone';
 export const MILESTONE_POSITIONS: Record<MilestoneType, MilestonePosition> = {
 	firstMeeting: {
 		id: 'firstMeeting',
-		offsetY: 0, // Top position
+		offsetY: 350, // Much higher
 	},
 	engagement: {
 		id: 'engagement',
-		offsetY: 25, // Slightly lower
+		offsetY: -50, // Much lower
 	},
 	movingTogether: {
 		id: 'movingTogether',
-		offsetY: 15, // Medium-low
+		offsetY: 250, // Medium high
 	},
 	proposal: {
 		id: 'proposal',
-		offsetY: 35, // Lower
+		offsetY: 0, // Very low
 	},
 	wedding: {
 		id: 'wedding',
-		offsetY: 10, // Prominent center position
+		offsetY: 300, // Center - most important
 	},
 	honeymoon: {
 		id: 'honeymoon',
-		offsetY: 20, // Right side
+		offsetY: -100, // Medium low
 	},
 };
 

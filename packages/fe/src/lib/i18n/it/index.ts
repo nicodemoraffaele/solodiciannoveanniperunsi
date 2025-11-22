@@ -35,16 +35,16 @@ const it = {
 			description: 'Il giorno in cui celebreremo il nostro amore davanti alle persone che amiamo.',
 			church: {
 				title: 'La cerimonia',
-				name: 'Chiesa [Nome Chiesa]',
-				address: '[Indirizzo della chiesa]',
-				time: 'Ore [Orario]',
+				name: 'Pieve San Giovanni Battista a Ponte allo Spino',
+				address: 'Strada Provinciale di Sovicille, 10, 53018 Sovicille SI',
+				time: 'Ore 16:30',
 				description:
 					'Qui ci scambieremo le promesse che ci legheranno per sempre. Vi aspettiamo per condividere con noi questo momento magico.',
 			},
 			reception: {
 				title: 'Il ricevimento',
-				name: 'Location [Nome Location]',
-				address: '[Indirizzo della location]',
+				name: 'Fattoria Cerreto a Merse',
+				address: 'Strada Comunale di Recenza, 53018 Siena SI',
 				time: 'A seguire',
 				description:
 					'Dopo la cerimonia, festeggeremo insieme in questa splendida location. Musica, balli e tanta allegria per celebrare il nostro amore!',

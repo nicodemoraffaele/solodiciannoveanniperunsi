@@ -468,6 +468,7 @@ __metadata:
     "@sveltejs/adapter-auto": ^3.3.1
     "@sveltejs/kit": ^2.12.2
     "@sveltejs/vite-plugin-svelte": ^5.0.3
+    arrow-line: ^0.7.5
     autoprefixer: ^10.4.20
     class-variance-authority: ^0.7.1
     clsx: ^2.1.1
@@ -1042,6 +1043,13 @@ __metadata:
     get-intrinsic: ^1.2.6
     is-array-buffer: ^3.0.4
   checksum: b1d1fd20be4e972a3779b1569226f6740170dca10f07aa4421d42cefeec61391e79c557cda8e771f5baefe47d878178cd4438f60916ce831813c08132bced765
+  languageName: node
+  linkType: hard
+
+"arrow-line@npm:^0.7.5":
+  version: 0.7.5
+  resolution: "arrow-line@npm:0.7.5"
+  checksum: 880f986dc3220c2b07fcb10ba065d212840bc6adeee6c1bcf15a7d71c3050a40813631a09c9acd1f45edfba8fef728f3c600190bc72a9f810c92bc27062f8693
   languageName: node
   linkType: hard
 

@@ -25,41 +25,62 @@
 		}
 	};
 
+	const handleBackdropKeydown = (e: KeyboardEvent) => {
+		if (e.key === 'Escape') {
+			onClose();
+		}
+	};
+
 	const handlePopupClick = (e: MouseEvent) => {
 		// Prevent the click from bubbling up to the backdrop
 		e.stopPropagation();
 	};
 
-	// Disable body scroll when popup is open
-	$effect(() => {
-		if (isOpen) {
-			document.body.style.overflow = 'hidden';
-		} else {
-			document.body.style.overflow = '';
-		}
+	const handlePopupKeydown = (e: KeyboardEvent) => {
+		// Prevent the keydown from bubbling up to the backdrop
+		e.stopPropagation();
+	};
 
-		// Cleanup: restore scroll on unmount
-		return () => {
-			document.body.style.overflow = '';
-		};
-	});
+	let closeButtonRef: HTMLButtonElement | undefined = $state();
+
+	const handleCloseHover = () => {
+		if (closeButtonRef) {
+			closeButtonRef.style.backgroundColor = '#F0EDE9';
+		}
+	};
+
+	const handleCloseLeave = () => {
+		if (closeButtonRef) {
+			closeButtonRef.style.backgroundColor = 'transparent';
+		}
+	};
 </script>
 
 {#if isOpen}
 	<div
 		class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
 		onclick={handleBackdropClick}
+		onkeydown={handleBackdropKeydown}
 		role="dialog"
 		aria-modal="true"
+		tabindex="-1"
 	>
 		<div
-			class="relative w-full {sizeClasses[size]} animate-fadeIn rounded-2xl bg-white p-6 shadow-2xl md:p-8"
+			class="relative w-full {sizeClasses[size]} animate-fadeIn rounded-lg max-h-[90vh] flex flex-col"
+			style="background: #FAFAF8; box-shadow: 0 20px 40px rgba(122, 139, 127, 0.15); border: 1px solid #E8E5E1;"
 			onclick={handlePopupClick}
+			onkeydown={handlePopupKeydown}
+			role="document"
+			tabindex="0"
 		>
 			<!-- Close button -->
 			<button
+				bind:this={closeButtonRef}
 				onclick={onClose}
-				class="absolute right-4 top-4 rounded-full p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600"
+				onmouseenter={handleCloseHover}
+				onmouseleave={handleCloseLeave}
+				class="absolute right-4 top-4 rounded-full p-2 transition-colors z-10"
+				style="color: #8B9F8C;"
 				aria-label="Chiudi popup"
 			>
 				<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,15 +88,26 @@
 				</svg>
 			</button>
 
-			<!-- Header -->
-			<div class="mb-6 border-b border-gray-200 pb-4">
-				<p class="mb-2 text-sm font-medium uppercase tracking-wider text-pink-600">{date}</p>
-				<h2 class="text-3xl font-serif text-gray-800">{title}</h2>
-			</div>
+			<div class="overflow-y-auto p-6 md:p-8">
+				<!-- Header -->
+				<div class="mb-6 border-b pb-4" style="border-color: #E8E5E1;">
+					<p
+						class="mb-2"
+						style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: #C17557; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 300;"
+					>
+						{date}
+					</p>
+					<h2 style="font-family: 'Pinyon Script', cursive; font-size: 2.5rem; color: #7A8B7F; line-height: 1.2;">
+						{title}
+					</h2>
+				</div>
 
-			<!-- Content -->
-			<div class="text-gray-700">
-				{@render children()}
+				<!-- Content -->
+				<div
+					style="font-family: 'Cormorant Garamond', serif; color: #5A6B5F; line-height: 1.8; font-size: 1.05rem;"
+				>
+					{@render children()}
+				</div>
 			</div>
 		</div>
 	</div>

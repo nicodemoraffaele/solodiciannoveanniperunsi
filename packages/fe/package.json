@@ -44,6 +44,7 @@
 		"zod": "^3.24.1"
 	},
 	"dependencies": {
+		"arrow-line": "^0.7.5",
 		"openapi-typescript": "^7.4.4"
 	}
 }

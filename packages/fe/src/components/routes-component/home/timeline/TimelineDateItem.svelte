@@ -61,23 +61,28 @@
 		position: relative;
 		cursor: pointer;
 		transition: transform 0.3s ease;
+		flex-shrink: 0;
+		min-width: 180px;
 	}
 
 	.date-card {
 		position: relative;
 		padding: 1rem 1.5rem;
-		background: white;
-		border-radius: 1rem;
-		box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+		background: #FFFFFF;
+		border-radius: 0.5rem;
+		box-shadow: 0 2px 8px -1px rgba(90, 107, 95, 0.25);
 		transition: all 0.3s ease;
-		border: 2px solid transparent;
+		border: 2px solid #D5CEC5;
+		font-family: 'Cormorant Garamond', serif;
+		width: 100%;
 	}
 
 	.date-card.hovered,
 	.date-card:hover {
 		transform: translateY(-4px);
-		box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-		border-color: rgb(236 72 153); /* pink-500 */
+		box-shadow: 0 8px 20px -4px rgba(90, 107, 95, 0.35);
+		border-color: #7A8B7F;
+		background: #FFFFFF;
 	}
 
 	.date-content {
@@ -87,14 +92,16 @@
 	}
 
 	.date-text {
-		font-size: 0.875rem;
-		font-weight: 600;
-		color: rgb(55 65 81); /* gray-700 */
+		font-size: 1.1rem;
+		font-weight: 500;
+		color: #4A5B4F;
 		white-space: nowrap;
+		font-family: 'Cormorant Garamond', serif;
+		letter-spacing: 0.03em;
 	}
 
 	.special-indicator {
-		color: rgb(234 179 8); /* yellow-500 */
+		color: #C17557;
 		animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 	}
 
@@ -112,7 +119,7 @@
 	}
 
 	.pulse-ring.special-pulse {
-		border: 2px solid rgb(236 72 153); /* pink-500 */
+		border: 2px solid #8B9F8C;
 	}
 
 	@keyframes pulse {
