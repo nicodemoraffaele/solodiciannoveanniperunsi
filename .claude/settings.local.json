@@ -8,7 +8,8 @@
       "WebFetch(domain:github.com)",
       "Bash(npm install:*)",
       "Bash(yarn workspace fe add:*)",
-      "Bash(yarn workspace:*)"
+      "Bash(yarn workspace:*)",
+      "Bash(yarn add:*)"
     ],
     "deny": [],
     "ask": []
