@@ -35,7 +35,7 @@ jobs:
           EFEBIA_COM_NPM_TOKEN: ${{ secrets.EFEBIA_COM_NPM_TOKEN }}
 
       - name: Build
-        run: yarn workspace @project/fe build
+        run: yarn workspace @project/fe build:prod
         env:
           NODE_ENV: production
           EFEBIA_COM_NPM_TOKEN: ${{ secrets.EFEBIA_COM_NPM_TOKEN }}
