@@ -31,11 +31,14 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --immutable
+        env:
+          EFEBIA_COM_NPM_TOKEN: ${{ secrets.EFEBIA_COM_NPM_TOKEN }}
 
       - name: Build
         run: yarn workspace @project/fe build
         env:
           NODE_ENV: production
+          EFEBIA_COM_NPM_TOKEN: ${{ secrets.EFEBIA_COM_NPM_TOKEN }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
