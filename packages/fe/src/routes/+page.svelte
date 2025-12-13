@@ -34,10 +34,6 @@
 		<!-- Timeline -->
 		<main class="">
 			<TimelineContainer />
-			<!-- Footer with church image -->
-			<div class="footer-image">
-				<img src="/PieveSanGiovanni_stilizzata.png" alt="Pieve San Giovanni" />
-			</div>
 		</main>
 
 		<!-- Footer text -->
@@ -66,19 +62,6 @@
 
 	.page-background {
 		background: linear-gradient(to bottom, #fafaf8 0%, #f5f1ed 100%);
-	}
-
-	.footer-image {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.footer-image img {
-		width: 90%;
-		height: auto;
-		opacity: 0.7;
 	}
 
 	.footer-text {

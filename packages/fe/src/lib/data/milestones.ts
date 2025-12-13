@@ -1,6 +1,18 @@
 import type { MilestonePosition, MilestoneType } from '$lib/types/milestone';
 
 /**
+ * Images for each milestone
+ */
+export const MILESTONE_IMAGES: Record<MilestoneType, string | undefined> = {
+	firstMeeting: 'scuola_verde.png',
+	engagement: 'siena_duomo_verde.png',
+	movingTogether: 'duomo_milano_verde.png',
+	proposal: 'miliscola_verde.png',
+	wedding: 'borgo_verde.png',
+	honeymoon: undefined, // No image for honeymoon
+};
+
+/**
  * Desktop layout positions for milestones
  * Each milestone has a different vertical offset to create visual interest
  * Dates are displayed horizontally from left to right at different heights

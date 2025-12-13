@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { MilestoneType } from '$lib/types/milestone';
+	import { base } from '$app/paths';
 
 	interface Props {
 		id: MilestoneType;
@@ -7,9 +8,10 @@
 		offsetY: number;
 		isSpecial?: boolean;
 		onOpen: () => void;
+		image?: string;
 	}
 
-	let { id, date, offsetY, isSpecial = false, onOpen }: Props = $props();
+	let { id, date, offsetY, isSpecial = false, onOpen, image }: Props = $props();
 
 	let isHovered = $state(false);
 
@@ -38,6 +40,11 @@
 	data-milestone={id}
 >
 	<div class="date-card {isHovered ? 'hovered' : ''}">
+		{#if image}
+			<div class="date-image">
+				<img src="{base}/{image}" alt="" />
+			</div>
+		{/if}
 		<div class="date-content">
 			<p class="date-text">{date}</p>
 
@@ -68,11 +75,11 @@
 	.date-card {
 		position: relative;
 		padding: 1rem 1.5rem;
-		background: #FFFFFF;
+		background: #ffffff;
 		border-radius: 0.5rem;
 		box-shadow: 0 2px 8px -1px rgba(90, 107, 95, 0.25);
 		transition: all 0.3s ease;
-		border: 2px solid #D5CEC5;
+		border: 2px solid #d5cec5;
 		font-family: 'Cormorant Garamond', serif;
 		width: 100%;
 	}
@@ -81,8 +88,27 @@
 	.date-card:hover {
 		transform: translateY(-4px);
 		box-shadow: 0 8px 20px -4px rgba(90, 107, 95, 0.35);
-		border-color: #7A8B7F;
-		background: #FFFFFF;
+		border-color: #7a8b7f;
+		background: #ffffff;
+	}
+
+	.date-image {
+		width: 100%;
+		margin-bottom: 0.75rem;
+		border-radius: 0.375rem;
+		overflow: hidden;
+	}
+
+	.date-image img {
+		width: 100%;
+		height: 80px;
+		object-fit: cover;
+		opacity: 0.85;
+		transition: opacity 0.3s ease;
+	}
+
+	.date-card.hovered .date-image img {
+		opacity: 1;
 	}
 
 	.date-content {
@@ -94,14 +120,14 @@
 	.date-text {
 		font-size: 1.1rem;
 		font-weight: 500;
-		color: #4A5B4F;
+		color: #4a5b4f;
 		white-space: nowrap;
 		font-family: 'Cormorant Garamond', serif;
 		letter-spacing: 0.03em;
 	}
 
 	.special-indicator {
-		color: #C17557;
+		color: #c17557;
 		animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 	}
 
@@ -119,7 +145,7 @@
 	}
 
 	.pulse-ring.special-pulse {
-		border: 2px solid #8B9F8C;
+		border: 2px solid #8b9f8c;
 	}
 
 	@keyframes pulse {

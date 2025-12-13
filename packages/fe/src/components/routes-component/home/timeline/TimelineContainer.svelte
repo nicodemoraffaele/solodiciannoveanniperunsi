@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { LL } from '$lib/i18n/i18n-svelte';
-	import { MILESTONE_ORDER, MILESTONE_POSITIONS } from '$lib/data/milestones';
+	import { MILESTONE_ORDER, MILESTONE_POSITIONS, MILESTONE_IMAGES } from '$lib/data/milestones';
 	import type { MilestoneType } from '$lib/types/milestone';
 	import TimelineDateItem from './TimelineDateItem.svelte';
 	import DatePopup from '$components/common/popup/DatePopup.svelte';
@@ -191,6 +191,7 @@
 						offsetY={0}
 						isSpecial={milestoneId === 'wedding'}
 						onOpen={() => openMilestonePopup(milestoneId)}
+						image={MILESTONE_IMAGES[milestoneId]}
 					/>
 				</div>
 			{/each}
@@ -235,6 +236,7 @@
 						offsetY={0}
 						isSpecial={milestoneId === 'wedding'}
 						onOpen={() => openMilestonePopup(milestoneId)}
+						image={MILESTONE_IMAGES[milestoneId]}
 					/>
 				{/each}
 			</div>
@@ -247,6 +249,7 @@
 						offsetY={0}
 						isSpecial={milestoneId === 'wedding'}
 						onOpen={() => openMilestonePopup(milestoneId)}
+						image={MILESTONE_IMAGES[milestoneId]}
 					/>
 				{/each}
 			</div>
@@ -291,6 +294,7 @@
 					offsetY={position.offsetY}
 					isSpecial={milestoneId === 'wedding'}
 					onOpen={() => openMilestonePopup(milestoneId)}
+					image={MILESTONE_IMAGES[milestoneId]}
 				/>
 			{/each}
 
