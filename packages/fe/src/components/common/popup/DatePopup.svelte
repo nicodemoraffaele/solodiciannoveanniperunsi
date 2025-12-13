@@ -57,6 +57,7 @@
 </script>
 
 {#if isOpen}
+	<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 	<div
 		class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
 		onclick={handleBackdropClick}
@@ -65,8 +66,10 @@
 		aria-modal="true"
 		tabindex="-1"
 	>
+		<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 		<div
-			class="relative w-full {sizeClasses[size]} animate-fadeIn rounded-lg max-h-[90vh] flex flex-col"
+			class="relative w-full {sizeClasses[size]} animate-fadeIn flex max-h-[90vh] flex-col rounded-lg"
 			style="background: #FAFAF8; box-shadow: 0 20px 40px rgba(122, 139, 127, 0.15); border: 1px solid #E8E5E1;"
 			onclick={handlePopupClick}
 			onkeydown={handlePopupKeydown}
@@ -79,7 +82,7 @@
 				onclick={onClose}
 				onmouseenter={handleCloseHover}
 				onmouseleave={handleCloseLeave}
-				class="absolute right-4 top-4 rounded-full p-2 transition-colors z-10"
+				class="absolute right-4 top-4 z-10 rounded-full p-2 transition-colors"
 				style="color: #8B9F8C;"
 				aria-label="Chiudi popup"
 			>
@@ -97,7 +100,9 @@
 					>
 						{date}
 					</p>
-					<h2 style="font-family: 'Pinyon Script', cursive; font-size: 2.5rem; color: #7A8B7F; line-height: 1.2;">
+					<h2
+						style="font-family: 'Pinyon Script', cursive; font-size: 2.5rem; color: #7A8B7F; line-height: 1.2;"
+					>
 						{title}
 					</h2>
 				</div>

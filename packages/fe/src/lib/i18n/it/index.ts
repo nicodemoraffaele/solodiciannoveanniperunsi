@@ -9,7 +9,8 @@ const it = {
 		firstMeeting: {
 			date: '24 Aprile 2007',
 			title: 'Il nostro primo incontro',
-			description: 'Il giorno in cui Sara, con la mano fasciata ed il dito steccato, chiese a Raffaele il numero fuori la sua classe. Indossava un jeans ed un maglioncino azzurro. Chi avrebbe mai pensato che quel momento avrebbe cambiato tutto?',
+			description:
+				'Il giorno in cui Sara, con la mano fasciata ed il dito steccato, chiese a Raffaele il numero fuori la sua classe. Indossava un jeans ed un maglioncino azzurro. Chi avrebbe mai pensato che quel momento avrebbe cambiato tutto?',
 		},
 		engagement: {
 			date: '14 Settembre 2007',

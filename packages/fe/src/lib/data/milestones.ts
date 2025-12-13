@@ -20,7 +20,7 @@ export const MILESTONE_IMAGES: Record<MilestoneType, string | undefined> = {
 export const MILESTONE_POSITIONS: Record<MilestoneType, MilestonePosition> = {
 	firstMeeting: {
 		id: 'firstMeeting',
-		offsetY: 350, // Much higher
+		offsetY: 50, // Much higher
 	},
 	engagement: {
 		id: 'engagement',
@@ -28,19 +28,19 @@ export const MILESTONE_POSITIONS: Record<MilestoneType, MilestonePosition> = {
 	},
 	movingTogether: {
 		id: 'movingTogether',
-		offsetY: 250, // Medium high
+		offsetY: 50, // Medium high
 	},
 	proposal: {
 		id: 'proposal',
-		offsetY: 0, // Very low
+		offsetY: -50, // Very low
 	},
 	wedding: {
 		id: 'wedding',
-		offsetY: 300, // Center - most important
+		offsetY: 50, // Center - most important
 	},
 	honeymoon: {
 		id: 'honeymoon',
-		offsetY: -100, // Medium low
+		offsetY: -50, // Medium low
 	},
 };
 

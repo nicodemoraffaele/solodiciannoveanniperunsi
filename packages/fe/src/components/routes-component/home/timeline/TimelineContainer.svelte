@@ -13,6 +13,65 @@
 	let timelineContainer: HTMLElement | undefined = $state();
 	let arrows = $state<Record<string, { path: string; arrowTransform: string }>>({});
 	let arrowsVisible = $state(false);
+	const showArrows = false; // Set to true to re-enable arrows
+
+	// Road paths
+	let roadPath = $state<string>('');
+	let roadVisible = $state(false);
+	const showRoad = true; // Toggle for road
+
+	// Calculate the serpentine road path
+	const calculateRoad = () => {
+		if (!timelineContainer) return;
+
+		const containerRect = timelineContainer.getBoundingClientRect();
+		const points: { x: number; y: number }[] = [];
+
+		// Collect center points of all milestone cards
+		for (const milestoneId of MILESTONE_ORDER) {
+			const element = timelineContainer.querySelector(`[data-milestone="${milestoneId}"]`);
+			if (element) {
+				const rect = element.getBoundingClientRect();
+				points.push({
+					x: rect.left + rect.width / 2 - containerRect.left,
+					y: rect.top + rect.height / 2 - containerRect.top,
+				});
+			}
+		}
+
+		if (points.length < 2) return;
+
+		// Build a smooth path through all points using cubic bezier curves
+		let path = `M ${points[0].x} ${points[0].y}`;
+
+		for (let i = 0; i < points.length - 1; i++) {
+			const current = points[i];
+			const next = points[i + 1];
+
+			if (isMobile) {
+				// Mobile: S-curve with vertical movement
+				const midY = (current.y + next.y) / 2;
+				const controlX1 = current.x;
+				const controlY1 = midY;
+				const controlX2 = next.x;
+				const controlY2 = midY;
+				path += ` C ${controlX1} ${controlY1}, ${controlX2} ${controlY2}, ${next.x} ${next.y}`;
+			} else {
+				// Desktop: S-curve with horizontal movement and vertical waves
+				const midX = (current.x + next.x) / 2;
+				const verticalDiff = next.y - current.y;
+				// Create wavy effect
+				const controlX1 = midX;
+				const controlY1 = current.y + verticalDiff * 0.5;
+				const controlX2 = midX;
+				const controlY2 = next.y - verticalDiff * 0.5;
+				path += ` C ${controlX1} ${controlY1}, ${controlX2} ${controlY2}, ${next.x} ${next.y}`;
+			}
+		}
+
+		roadPath = path;
+		roadVisible = true;
+	};
 
 	const openMilestonePopup = (id: MilestoneType) => {
 		openPopup = id;
@@ -157,8 +216,11 @@
 			const width = window.innerWidth;
 			isMobile = width < 768;
 			isTablet = width >= 768 && width < 1200;
-			// Recalculate arrows when switching views
-			setTimeout(calculateArrows, 200);
+			// Recalculate arrows and road when switching views
+			setTimeout(() => {
+				calculateArrows();
+				calculateRoad();
+			}, 200);
 		};
 
 		checkViewport();
@@ -169,10 +231,13 @@
 		};
 	});
 
-	// Calculate arrows after timeline is rendered
+	// Calculate arrows and road after timeline is rendered
 	$effect(() => {
 		if (timelineContainer) {
-			setTimeout(calculateArrows, 200);
+			setTimeout(() => {
+				calculateArrows();
+				calculateRoad();
+			}, 200);
 		}
 	});
 </script>
@@ -181,6 +246,32 @@
 	{#if isMobile}
 		<!-- Mobile: Vertical timeline with alternating sides -->
 		<div class="mobile-timeline" bind:this={timelineContainer}>
+			<!-- SVG layer for serpentine road -->
+			{#if showRoad && roadVisible && roadPath}
+				<svg class="road-svg">
+					<!-- Road background (wider, darker) -->
+					<path
+						d={roadPath}
+						fill="none"
+						stroke="#D5CEC5"
+						stroke-width="24"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						opacity="0.6"
+					/>
+					<!-- Road center line (dashed) -->
+					<path
+						d={roadPath}
+						fill="none"
+						stroke="#8B9F8C"
+						stroke-width="4"
+						stroke-dasharray="14,10"
+						stroke-linecap="round"
+						opacity="0.8"
+					/>
+				</svg>
+			{/if}
+
 			{#each MILESTONE_ORDER as milestoneId, index}
 				{@const milestone = getMilestone(milestoneId)}
 				{@const isLeft = index % 2 === 0}
@@ -197,7 +288,7 @@
 			{/each}
 
 			<!-- SVG layer for mobile arrows -->
-			{#if arrowsVisible}
+			{#if showArrows && arrowsVisible}
 				<svg class="arrows-svg">
 					{#each MILESTONE_ORDER as milestoneId, index}
 						{#if index < MILESTONE_ORDER.length - 1}
@@ -255,7 +346,7 @@
 			</div>
 
 			<!-- SVG layer for tablet arrows -->
-			{#if arrowsVisible}
+			{#if showArrows && arrowsVisible}
 				<svg class="arrows-svg">
 					{#each MILESTONE_ORDER as milestoneId, index}
 						{#if index < MILESTONE_ORDER.length - 1}
@@ -285,6 +376,32 @@
 	{:else}
 		<!-- Desktop: Horizontal timeline with different heights -->
 		<div class="desktop-timeline" bind:this={timelineContainer}>
+			<!-- SVG layer for serpentine road -->
+			{#if showRoad && roadVisible && roadPath}
+				<svg class="road-svg">
+					<!-- Road background (wider, darker) -->
+					<path
+						d={roadPath}
+						fill="none"
+						stroke="#D5CEC5"
+						stroke-width="24"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						opacity="0.6"
+					/>
+					<!-- Road center line (dashed) -->
+					<path
+						d={roadPath}
+						fill="none"
+						stroke="#8B9F8C"
+						stroke-width="4"
+						stroke-dasharray="14,10"
+						stroke-linecap="round"
+						opacity="0.8"
+					/>
+				</svg>
+			{/if}
+
 			{#each MILESTONE_ORDER as milestoneId, index}
 				{@const milestone = getMilestone(milestoneId)}
 				{@const position = MILESTONE_POSITIONS[milestoneId]}
@@ -299,7 +416,7 @@
 			{/each}
 
 			<!-- SVG layer for all arrows -->
-			{#if arrowsVisible}
+			{#if showArrows && arrowsVisible}
 				<svg class="arrows-svg">
 					{#each MILESTONE_ORDER as milestoneId, index}
 						{#if index < MILESTONE_ORDER.length - 1}
@@ -449,6 +566,17 @@
 	}
 
 	.arrows-svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		z-index: 0;
+		overflow: visible;
+	}
+
+	.road-svg {
 		position: absolute;
 		top: 0;
 		left: 0;

@@ -70,6 +70,7 @@
 		transition: transform 0.3s ease;
 		flex-shrink: 0;
 		min-width: 180px;
+		z-index: 1;
 	}
 
 	.date-card {
@@ -101,7 +102,7 @@
 
 	.date-image img {
 		width: 100%;
-		height: 80px;
+		height: 160px;
 		object-fit: cover;
 		opacity: 0.85;
 		transition: opacity 0.3s ease;

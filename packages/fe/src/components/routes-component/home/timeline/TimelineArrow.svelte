@@ -43,7 +43,7 @@
 					svgPath = `M ${startX} ${startY} Q ${controlX} ${controlY} ${endX} ${endY}`;
 
 					// Calculate angle for arrow head
-					const angle = Math.atan2(endY - controlY, endX - controlX) * 180 / Math.PI;
+					const angle = (Math.atan2(endY - controlY, endX - controlX) * 180) / Math.PI;
 					arrowTransform = `translate(${endX}, ${endY}) rotate(${angle})`;
 				}
 			}

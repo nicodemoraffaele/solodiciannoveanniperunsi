@@ -54,7 +54,8 @@ const en = {
 		honeymoon: {
 			date: 'September 2026',
 			title: 'Honeymoon',
-			description: 'Our first trip as husband and wife. An adventure that will mark the beginning of our new life together.',
+			description:
+				'Our first trip as husband and wife. An adventure that will mark the beginning of our new life together.',
 			giftMessage: 'The greatest gift',
 			giftDescription:
 				'Your presence is the most precious gift we could receive. If you wish to contribute to our honeymoon, we would be happy to share the memories of this adventure with you.',

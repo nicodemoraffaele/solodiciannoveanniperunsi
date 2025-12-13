@@ -81,12 +81,16 @@
 	</div>
 
 	<!-- RSVP Section -->
-	<div class="mt-8 rounded-xl border-2 bg-gradient-to-br from-pink-50 to-purple-50 p-6 text-center" style="border-color: #C17557;">
+	<div
+		class="mt-8 rounded-xl border-2 bg-gradient-to-br from-pink-50 to-purple-50 p-6 text-center"
+		style="border-color: #C17557;"
+	>
 		<h3 class="mb-3 text-2xl font-semibold" style="font-family: 'Pinyon Script', cursive; color: #7A8B7F;">
 			Conferma la tua presenza
 		</h3>
 		<p class="mb-6 text-base leading-relaxed" style="font-family: 'Cormorant Garamond', serif; color: #5A6B5F;">
-			Saremmo felici di averti con noi in questo giorno speciale. Ti preghiamo di confermare la tua presenza e comunicarci eventuali esigenze alimentari.
+			Saremmo felici di averti con noi in questo giorno speciale. Ti preghiamo di confermare la tua presenza e
+			comunicarci eventuali esigenze alimentari.
 		</p>
 		<a
 			href="/rsvp"
