@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { LL } from '$lib/i18n/i18n-svelte';
 	import { MILESTONE_ORDER, MILESTONE_POSITIONS, MILESTONE_IMAGES } from '$lib/data/milestones';
 	import type { MilestoneType } from '$lib/types/milestone';
@@ -57,14 +58,15 @@
 				const controlY2 = midY;
 				path += ` C ${controlX1} ${controlY1}, ${controlX2} ${controlY2}, ${next.x} ${next.y}`;
 			} else {
-				// Desktop: S-curve with horizontal movement and vertical waves
-				const midX = (current.x + next.x) / 2;
-				const verticalDiff = next.y - current.y;
-				// Create wavy effect
-				const controlX1 = midX;
-				const controlY1 = current.y + verticalDiff * 0.5;
-				const controlX2 = midX;
-				const controlY2 = next.y - verticalDiff * 0.5;
+				// Desktop: wavy S-curve with alternating direction
+				const waveAmplitude = 100; // Height of the wave
+				// Alternate wave direction for each segment
+				const waveDirection = i % 2 === 0 ? 1 : -1;
+
+				const controlX1 = current.x + (next.x - current.x) * 0.3;
+				const controlY1 = current.y + waveAmplitude * waveDirection;
+				const controlX2 = current.x + (next.x - current.x) * 0.7;
+				const controlY2 = next.y - waveAmplitude * waveDirection;
 				path += ` C ${controlX1} ${controlY1}, ${controlX2} ${controlY2}, ${next.x} ${next.y}`;
 			}
 		}
@@ -461,6 +463,7 @@
 					address: wedding.church.address(),
 					time: wedding.church.time(),
 					description: wedding.church.description(),
+					imageUrl: `${base}/pieve_1.jpg`,
 				}}
 				reception={{
 					title: wedding.reception.title(),
@@ -468,6 +471,7 @@
 					address: wedding.reception.address(),
 					time: wedding.reception.time(),
 					description: wedding.reception.description(),
+					imageUrl: `${base}/borgo_1.png`,
 				}}
 			/>
 		{:else if milestoneId === 'honeymoon'}
@@ -503,6 +507,7 @@
 		width: 100%;
 		margin: 0 auto;
 		overflow-x: auto;
+		padding-top: 4rem;
 	}
 
 	.desktop-timeline {

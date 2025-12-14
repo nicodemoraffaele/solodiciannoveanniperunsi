@@ -64,16 +64,6 @@
 		background: linear-gradient(to bottom, #fafaf8 0%, #f5f1ed 100%);
 	}
 
-	.timeline-main {
-		margin-top: 2rem;
-	}
-
-	@media (min-width: 768px) {
-		.timeline-main {
-			margin-top: 4rem;
-		}
-	}
-
 	.footer-text {
 		text-align: center;
 		padding: 2rem 1rem;

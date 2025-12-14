@@ -69,7 +69,7 @@
 		cursor: pointer;
 		transition: transform 0.3s ease;
 		flex-shrink: 0;
-		min-width: 180px;
+		min-width: 240px;
 		z-index: 1;
 	}
 
