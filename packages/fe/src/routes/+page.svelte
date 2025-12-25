@@ -8,7 +8,7 @@
 </svelte:head>
 
 <div class="page-background min-h-screen overflow-hidden">
-	<div class="mx-auto px-4">
+	<div class="displayNone mx-auto px-4">
 		<!-- Header -->
 		<header class="py-4 text-center md:py-8">
 			<h1
@@ -58,6 +58,10 @@
 		padding: 0;
 		overflow-x: hidden;
 		height: 100%;
+	}
+
+	.displayNone {
+		display: none;
 	}
 
 	.page-background {

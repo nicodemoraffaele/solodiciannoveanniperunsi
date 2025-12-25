@@ -21,7 +21,7 @@
 <div class="page-background min-h-screen overflow-hidden">
 	<div class="mx-auto px-4">
 		<div class="center workinprogress">
-			<h1 class="animate-fadeInUp mb-6">L'amore non si costruisce in un giorno. Nemmeno questo sito.</h1>
+			<h1 class="animate-fadeInUp mb-6">L'amore non si costruisce in un giorno. <br /> Nemmeno questo sito.</h1>
 			<img src={imageUrl} alt="waiting" />
 		</div>
 
