@@ -95,6 +95,7 @@
 		justify-content: center;
 		align-items: center;
 		height: 40rem;
+		margin-top: 12%;
 	}
 
 	.heart-icon {
