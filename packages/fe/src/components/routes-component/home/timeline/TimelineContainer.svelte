@@ -281,6 +281,7 @@
 					<TimelineDateItem
 						id={milestoneId}
 						date={milestone.date()}
+						location={milestone.location ? milestone.location() : undefined}
 						offsetY={0}
 						isSpecial={milestoneId === 'wedding'}
 						onOpen={() => openMilestonePopup(milestoneId)}

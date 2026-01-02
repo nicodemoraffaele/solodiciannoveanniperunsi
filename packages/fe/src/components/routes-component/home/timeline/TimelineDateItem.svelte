@@ -5,13 +5,14 @@
 	interface Props {
 		id: MilestoneType;
 		date: string;
+		location: string;
 		offsetY: number;
 		isSpecial?: boolean;
 		onOpen: () => void;
 		image?: string;
 	}
 
-	let { id, date, offsetY, isSpecial = false, onOpen, image }: Props = $props();
+	let { id, date, location, offsetY, isSpecial = false, onOpen, image }: Props = $props();
 
 	let isHovered = $state(false);
 
@@ -46,7 +47,10 @@
 			</div>
 		{/if}
 		<div class="date-content">
-			<p class="date-text">{date}</p>
+			<div class="date-info">
+				<p class="date-location">{location}</p>
+				<p class="date-text">{date}</p>
+			</div>
 
 			{#if isSpecial}
 				<div class="special-indicator">
@@ -125,6 +129,22 @@
 		white-space: nowrap;
 		font-family: 'Cormorant Garamond', serif;
 		letter-spacing: 0.03em;
+	}
+
+	.date-location {
+		font-size: 1.1rem;
+		font-weight: 500;
+		color: #4a5b4f;
+		white-space: nowrap;
+		font-family: 'Cormorant Garamond', serif;
+		letter-spacing: 0.03em;
+	}
+
+	.date-info {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
 	}
 
 	.special-indicator {

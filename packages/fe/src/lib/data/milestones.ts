@@ -9,7 +9,7 @@ export const MILESTONE_IMAGES: Record<MilestoneType, string | undefined> = {
 	movingTogether: 'duomo_milano_verde.png',
 	proposal: 'miliscola_verde.png',
 	wedding: 'borgo_verde.png',
-	honeymoon: undefined, // No image for honeymoon
+	honeymoon: 'honeymoon_6.png',
 };
 
 /**

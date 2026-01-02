@@ -1,6 +1,5 @@
 <script lang="ts">
 	import TimelineContainer from '$components/routes-component/home/timeline/TimelineContainer.svelte';
-	import { LL } from '$lib/i18n/i18n-svelte';
 </script>
 
 <svelte:head>
@@ -8,25 +7,20 @@
 </svelte:head>
 
 <div class="page-background min-h-screen overflow-hidden">
-	<div class="displayNone mx-auto px-4">
+	<div class="mx-auto px-4">
 		<!-- Header -->
 		<header class="py-4 text-center md:py-8">
 			<h1
 				class="animate-fadeInUp mb-6"
 				style="font-family: 'Pinyon Script', cursive; font-size: 4rem; color: #7A8B7F; line-height: 1;"
 			>
-				Solo Diciannove Anni Per Un Si
+				Sara e Raffaele
 			</h1>
 			<div class="animate-fadeInUp" style="animation-delay: 0.2s;">
 				<p
 					style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #8B9F8C; font-weight: 300; letter-spacing: 0.15em; margin-bottom: 0.5rem;"
 				>
 					Sabato 20 Giugno 2026
-				</p>
-				<p
-					style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #7A8B7F; font-weight: 400;"
-				>
-					Sara e Raffaele
 				</p>
 			</div>
 		</header>
@@ -58,10 +52,6 @@
 		padding: 0;
 		overflow-x: hidden;
 		height: 100%;
-	}
-
-	.displayNone {
-		display: none;
 	}
 
 	.page-background {

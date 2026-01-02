@@ -12,7 +12,7 @@
 	setLocale(data.locale);
 
 	// Set to true to redirect all pages to /workinprogress
-	const WORK_IN_PROGRESS = true;
+	const WORK_IN_PROGRESS = false;
 
 	$effect(() => {
 		if (WORK_IN_PROGRESS && !$page.url.pathname.endsWith('/workinprogress')) {

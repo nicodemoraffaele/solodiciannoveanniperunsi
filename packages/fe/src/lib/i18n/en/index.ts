@@ -9,30 +9,35 @@ const en = {
 		firstMeeting: {
 			date: 'April 24, 2007',
 			title: 'Our first meeting',
+			location: 'Liceo Scientifico, Siena',
 			description:
 				'The day our eyes met for the first time. Who would have thought that moment would change our lives forever?',
 		},
 		engagement: {
 			date: 'September 14, 2007',
 			title: 'The first "Yes"',
+			location: 'Siena',
 			description:
 				'The day we decided to officially start this wonderful journey together. From that moment, every day has been a new adventure.',
 		},
 		movingTogether: {
 			date: 'November 2018',
 			title: 'Our home',
+			location: 'Milano',
 			description:
 				'The month we decided to build our nest together. Finally under the same roof, every day became an opportunity to grow together.',
 		},
 		proposal: {
 			date: 'August 21, 2025',
 			title: 'The proposal',
+			location: 'Miliscola (NA)',
 			description:
 				'The day Raffaele asked the most important question. With hearts racing and tears in our eyes, we said "Yes" to our future together.',
 		},
 		wedding: {
 			date: 'June 20, 2026',
 			title: 'Our wedding',
+			location: 'Sovicille (SI)',
 			description: 'The day we will celebrate our love in front of the people we cherish.',
 			church: {
 				title: 'The ceremony',
@@ -54,6 +59,7 @@ const en = {
 		honeymoon: {
 			date: 'September 2026',
 			title: 'Honeymoon',
+			location: '???',
 			description:
 				'Our first trip as husband and wife. An adventure that will mark the beginning of our new life together.',
 			giftMessage: 'The greatest gift',

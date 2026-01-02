@@ -4,6 +4,7 @@ export interface BaseMilestone {
 	id: MilestoneType;
 	date: string;
 	title: string;
+	location: string;
 	description: string;
 }
 

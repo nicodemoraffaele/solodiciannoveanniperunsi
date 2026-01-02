@@ -64,10 +64,10 @@
 		<p class="mb-6 leading-relaxed text-gray-700">{giftDescription}</p>
 
 		<!-- IBAN section -->
-		<div class="rounded-lg bg-white p-4 shadow-sm">
-			<p class="mb-2 text-base font-medium text-gray-600">{ibanLabel}</p>
+		<div class="rounded-lg bg-white p-2 shadow-sm">
+			<p class="ibanLabel mb-2 text-base font-medium text-gray-600">{ibanLabel}</p>
 
-			<div class="flex items-center gap-2">
+			<div class="ibanContainer flex items-center gap-2">
 				<code class="flex-1 rounded bg-gray-100 px-3 py-2 font-mono text-base font-semibold text-gray-800">
 					{ibanValue}
 				</code>
@@ -105,7 +105,23 @@
 				</button>
 			</div>
 
-			<p class="mt-2 text-xs text-gray-500">{ibanNote}</p>
+			<p class="ibanLabel mt-2 text-xs text-gray-500">{ibanNote}</p>
 		</div>
 	</div>
 </DatePopup>
+
+<style>
+	.ibanContainer {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.ibanContainer code {
+		font-size: 0.9rem;
+	}
+
+	.ibanLabel {
+		font-size: 0.9rem;
+		padding-left: 0.7rem;
+	}
+</style>
