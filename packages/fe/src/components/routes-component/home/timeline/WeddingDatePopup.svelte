@@ -22,9 +22,9 @@
 	<!-- Church and Reception sections -->
 	<div class="grid gap-8 md:grid-cols-2">
 		<!-- Church Section -->
-		<div class="rounded-xl border-2 border-pink-200 bg-pink-50/50 p-6">
+		<div class="border-champagne rounded-xl border-2 p-6">
 			<div class="mb-4 flex items-center gap-2">
-				<svg class="h-6 w-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<svg class="color-champagne h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path
 						stroke-linecap="round"
 						stroke-linejoin="round"
@@ -44,16 +44,16 @@
 			<div class="space-y-2 text-base">
 				<p class="font-medium text-gray-800">{church.name}</p>
 				<p class="text-gray-600">{church.address}</p>
-				<p class="font-semibold text-pink-600">{church.time}</p>
+				<p class="color-champagne font-semibold">{church.time}</p>
 			</div>
 
 			<p class="mt-4 text-base leading-relaxed text-gray-700">{church.description}</p>
 		</div>
 
 		<!-- Reception Section -->
-		<div class="rounded-xl border-2 border-purple-200 bg-purple-50/50 p-6">
+		<div class="border-champagne rounded-xl border-2 p-6">
 			<div class="mb-4 flex items-center gap-2">
-				<svg class="h-6 w-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<svg class="color-champagne h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path
 						stroke-linecap="round"
 						stroke-linejoin="round"
@@ -73,7 +73,7 @@
 			<div class="space-y-2 text-base">
 				<p class="font-medium text-gray-800">{reception.name}</p>
 				<p class="text-gray-600">{reception.address}</p>
-				<p class="font-semibold text-purple-600">{reception.time}</p>
+				<p class="color-champagne font-semibold">{reception.time}</p>
 			</div>
 
 			<p class="mt-4 text-base leading-relaxed text-gray-700">{reception.description}</p>
@@ -81,16 +81,14 @@
 	</div>
 
 	<!-- RSVP Section -->
-	<div
-		class="mt-8 rounded-xl border-2 bg-gradient-to-br from-pink-50 to-purple-50 p-6 text-center"
-		style="border-color: #C17557;"
-	>
+	<div class="border-champagne mt-8 rounded-xl border-2 p-6 text-center">
 		<h3 class="mb-3 text-2xl font-semibold" style="font-family: 'Pinyon Script', cursive; color: #7A8B7F;">
 			Conferma la tua presenza
 		</h3>
 		<p class="mb-6 text-base leading-relaxed" style="font-family: 'Cormorant Garamond', serif; color: #5A6B5F;">
 			Saremmo felici di averti con noi in questo giorno speciale. Ti preghiamo di confermare la tua presenza e
-			comunicarci eventuali esigenze alimentari.
+			comunicarci eventuali esigenze alimentari. Compila il modulo per ogni partecipante, compresi i bambini che
+			ceneranno con noi.
 		</p>
 		<a
 			href="/rsvp"
@@ -101,3 +99,13 @@
 		</a>
 	</div>
 </DatePopup>
+
+<style>
+	.border-champagne {
+		border-color: #c17557;
+	}
+
+	.color-champagne {
+		color: #c17557;
+	}
+</style>

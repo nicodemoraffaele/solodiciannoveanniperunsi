@@ -467,7 +467,7 @@
 					address: wedding.church.address(),
 					time: wedding.church.time(),
 					description: wedding.church.description(),
-					imageUrl: `${base}/pieve_1.jpg`,
+					imageUrl: `${base}/PieveSanGiovanni_stilizzata.png`,
 				}}
 				reception={{
 					title: wedding.reception.title(),
@@ -475,7 +475,7 @@
 					address: wedding.reception.address(),
 					time: wedding.reception.time(),
 					description: wedding.reception.description(),
-					imageUrl: `${base}/borgo_1.png`,
+					imageUrl: `${base}/borgo_verde_1.png`,
 				}}
 			/>
 		{:else if milestoneId === 'honeymoon'}
