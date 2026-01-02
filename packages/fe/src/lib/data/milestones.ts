@@ -4,12 +4,12 @@ import type { MilestonePosition, MilestoneType } from '$lib/types/milestone';
  * Images for each milestone
  */
 export const MILESTONE_IMAGES: Record<MilestoneType, string | undefined> = {
-	firstMeeting: 'scuola_verde.png',
-	engagement: 'siena_duomo_verde.png',
-	movingTogether: 'duomo_milano_verde.png',
-	proposal: 'miliscola_verde.png',
-	wedding: 'borgo_verde.png',
-	honeymoon: 'honeymoon_6.png',
+	firstMeeting: 'scuola_verde.webp',
+	engagement: 'siena_duomo_verde.webp',
+	movingTogether: 'duomo_milano_verde.webp',
+	proposal: 'miliscola_verde.webp',
+	wedding: 'borgo_verde.webp',
+	honeymoon: 'honeymoon_6.webp',
 };
 
 /**

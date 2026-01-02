@@ -281,7 +281,7 @@
 					<TimelineDateItem
 						id={milestoneId}
 						date={milestone.date()}
-						location={milestone.location ? milestone.location() : undefined}
+						location={milestone.location()}
 						offsetY={0}
 						isSpecial={milestoneId === 'wedding'}
 						onOpen={() => openMilestonePopup(milestoneId)}
@@ -327,6 +327,7 @@
 					<TimelineDateItem
 						id={milestoneId}
 						date={milestone.date()}
+						location={milestone.location()}
 						offsetY={0}
 						isSpecial={milestoneId === 'wedding'}
 						onOpen={() => openMilestonePopup(milestoneId)}
@@ -340,6 +341,7 @@
 					<TimelineDateItem
 						id={milestoneId}
 						date={milestone.date()}
+						location={milestone.location()}
 						offsetY={0}
 						isSpecial={milestoneId === 'wedding'}
 						onOpen={() => openMilestonePopup(milestoneId)}
@@ -411,6 +413,7 @@
 				<TimelineDateItem
 					id={milestoneId}
 					date={milestone.date()}
+					location={milestone.location()}
 					offsetY={position.offsetY}
 					isSpecial={milestoneId === 'wedding'}
 					onOpen={() => openMilestonePopup(milestoneId)}
