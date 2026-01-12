@@ -82,9 +82,9 @@
 		padding: 1rem 1.5rem;
 		background: #ffffff;
 		border-radius: 0.5rem;
-		box-shadow: 0 2px 8px -1px rgba(90, 107, 95, 0.25);
+		/* box-shadow: 0 2px 8px -1px rgba(90, 107, 95, 0.25); */
 		transition: all 0.3s ease;
-		border: 2px solid #d5cec5;
+		/* border: 2px solid #d5cec5; */
 		font-family: 'Cormorant Garamond', serif;
 		width: 100%;
 	}

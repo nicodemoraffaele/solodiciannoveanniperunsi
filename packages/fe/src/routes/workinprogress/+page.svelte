@@ -24,20 +24,6 @@
 			<h1 class="animate-fadeInUp mb-6">L'amore non si costruisce in un giorno. <br /> Nemmeno questo sito.</h1>
 			<img src={imageUrl} alt="waiting" />
 		</div>
-
-		<!-- Footer text -->
-		<footer class="footer-text">
-			<p>
-				Con
-				<svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-					<path
-						d="M50 85 C30 70, 10 55, 10 35 C10 20, 20 10, 30 10 C40 10, 45 15, 50 25 C55 15, 60 10, 70 10 C80 10, 90 20, 90 35 C90 55, 70 70, 50 85 Z"
-						fill="#7A8B7F"
-					/>
-				</svg>
-				Sara e Raffaele
-			</p>
-		</footer>
 	</div>
 </div>
 
@@ -70,39 +56,12 @@
 		width: 20rem;
 	}
 
-	.footer-text {
-		text-align: center;
-		padding: 2rem 1rem;
-		margin-top: 2rem;
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		right: 0;
-	}
-
-	.footer-text p {
-		font-family: 'Cormorant Garamond', serif;
-		font-size: 1.5rem;
-		color: #7a8b7f;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.5rem;
-	}
-
 	.center {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: 40rem;
 		margin-top: 12%;
-	}
-
-	.heart-icon {
-		width: 20px;
-		height: 20px;
-		display: inline-block;
-		animation: heartbeat 1.5s ease-in-out infinite;
 	}
 
 	@keyframes heartbeat {
