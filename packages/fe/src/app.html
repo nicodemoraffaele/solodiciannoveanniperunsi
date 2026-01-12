@@ -1,69 +1,72 @@
 <!doctype html>
 <html lang="%lang%">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.svg" type="image/svg+xml" />
+		<meta name="viewport" content="width=device-width" />
+		<meta
+			name="description"
+			content="Sara e Raffaele - 20 Giugno 2026. Il nostro percorso insieme, dalle prime parole al grande giorno."
+		/>
+		<meta name="author" content="Sara e Raffaele" />
 
-<head>
-	<meta charset="utf-8" />
-	<link rel="icon" href="%sveltekit.assets%/favicon.svg" type="image/svg+xml" />
-	<meta name="viewport" content="width=device-width" />
-	<meta name="description"
-		content="Sara e Raffaele - 20 Giugno 2026. Il nostro percorso insieme, dalle prime parole al grande giorno." />
-	<meta name="author" content="Sara e Raffaele" />
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Sara e Raffaele - Il nostro matrimonio" />
+		<meta
+			property="og:description"
+			content="20 Giugno 2026 - Celebriamo il nostro amore e il nostro percorso insieme"
+		/>
 
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Sara e Raffaele - Il nostro matrimonio" />
-	<meta property="og:description"
-		content="20 Giugno 2026 - Celebriamo il nostro amore e il nostro percorso insieme" />
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Sara e Raffaele - Il nostro matrimonio" />
+		<meta
+			name="twitter:description"
+			content="20 Giugno 2026 - Celebriamo il nostro amore e il nostro percorso insieme"
+		/>
 
-	<!-- Twitter -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Sara e Raffaele - Il nostro matrimonio" />
-	<meta name="twitter:description"
-		content="20 Giugno 2026 - Celebriamo il nostro amore e il nostro percorso insieme" />
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+			rel="stylesheet"
+		/>
 
-	<!-- Google Fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
-		rel="stylesheet" />
+		%sveltekit.head%
+	</head>
 
-	%sveltekit.head%
-</head>
+	<body data-sveltekit-preload-data="hover" class="loading">
+		<!-- Header -->
+		<header id="site-header" class="site-header">
+			<h1 class="animate-fadeInUp site-title">
+				<span class="title-line">Sara</span>
+				<span class="title-line title-e">e</span>
+				<span class="title-line">Raffaele</span>
+			</h1>
+			<div class="animate-fadeInUp" style="animation-delay: 0.2s">
+				<p class="site-date">Sabato 20 Giugno 2026</p>
+			</div>
+		</header>
 
-<body data-sveltekit-preload-data="hover" class="loading">
-	<!-- Header -->
-	<header id="site-header" class="site-header">
-		<h1 class="animate-fadeInUp site-title">
-			<span class="title-line">Sara</span>
-			<span class="title-line title-e">e</span>
-			<span class="title-line">Raffaele</span>
-		</h1>
-		<div class="animate-fadeInUp" style="animation-delay: 0.2s;">
-			<p class="site-date">
-				Sabato 20 Giugno 2026
+		<div style="display: contents">%sveltekit.body%</div>
+
+		<!-- Footer text -->
+		<footer id="site-footer" class="footer-text">
+			<p>
+				Fatto con
+				<svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+					<path
+						d="M50 85 C30 70, 10 55, 10 35 C10 20, 20 10, 30 10 C40 10, 45 15, 50 25 C55 15, 60 10, 70 10 C80 10, 90 20, 90 35 C90 55, 70 70, 50 85 Z"
+						fill="#7A8B7F"
+					/>
+				</svg>
+				da Sara e Raffaele
 			</p>
-		</div>
-	</header>
-
-	<div style="display: contents">%sveltekit.body%</div>
-
-	<!-- Footer text -->
-	<footer id="site-footer" class="footer-text">
-		<p>
-			Fatto con
-			<svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-				<path
-					d="M50 85 C30 70, 10 55, 10 35 C10 20, 20 10, 30 10 C40 10, 45 15, 50 25 C55 15, 60 10, 70 10 C80 10, 90 20, 90 35 C90 55, 70 70, 50 85 Z"
-					fill="#7A8B7F" />
-			</svg>
-			da Sara e Raffaele
-		</p>
-	</footer>
-</body>
-
+		</footer>
+	</body>
 </html>
-
 
 <style>
 	:global(html, body) {
@@ -91,7 +94,7 @@
 
 	.site-title {
 		font-family: 'Pinyon Script', cursive;
-		color: #7A8B7F;
+		color: #7a8b7f;
 		line-height: 1;
 		margin-bottom: 1rem;
 		font-size: 3.5rem;
@@ -109,7 +112,7 @@
 	.site-date {
 		font-family: 'Cormorant Garamond', serif;
 		font-size: 1rem;
-		color: #8B9F8C;
+		color: #8b9f8c;
 		font-weight: 300;
 		letter-spacing: 0.15em;
 		margin-bottom: 0.5rem;
@@ -163,9 +166,7 @@
 		animation: heartbeat 1.5s ease-in-out infinite;
 	}
 
-
 	@keyframes heartbeat {
-
 		0%,
 		100% {
 			transform: scale(1);
