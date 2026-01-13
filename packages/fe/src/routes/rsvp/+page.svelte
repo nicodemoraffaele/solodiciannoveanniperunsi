@@ -28,27 +28,17 @@
 </div>
 
 <style>
-	:global(html, body) {
-		margin: 0;
-		height: 100%;
-		overflow: hidden;
-	}
-
 	.rsvp-container {
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		border: 0;
+		width: 100%;
+		min-height: 70vh;
+		padding: 1rem;
 	}
 
 	.rsvp-container iframe {
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
+		width: 100%;
+		min-height: 600px;
+		height: 90vh;
 		border: 0;
+		border-radius: 0.5rem;
 	}
 </style>

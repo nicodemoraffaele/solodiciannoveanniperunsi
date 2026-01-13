@@ -80,11 +80,13 @@
 	.date-card {
 		position: relative;
 		padding: 1rem 1.5rem;
-		background: #ffffff;
-		border-radius: 0.5rem;
-		/* box-shadow: 0 2px 8px -1px rgba(90, 107, 95, 0.25); */
+		background: linear-gradient(to bottom, #ffffff 0%, #faf9f7 100%);
+		border-radius: 0.75rem;
+		box-shadow:
+			0 4px 20px -2px rgba(213, 206, 197, 0.5),
+			0 8px 40px -4px rgba(213, 206, 197, 0.3),
+			0 0 60px 10px rgba(245, 241, 237, 0.8);
 		transition: all 0.3s ease;
-		/* border: 2px solid #d5cec5; */
 		font-family: 'Cormorant Garamond', serif;
 		width: 100%;
 	}
@@ -92,9 +94,11 @@
 	.date-card.hovered,
 	.date-card:hover {
 		transform: translateY(-4px);
-		box-shadow: 0 8px 20px -4px rgba(90, 107, 95, 0.35);
-		border-color: #7a8b7f;
-		background: #ffffff;
+		box-shadow:
+			0 8px 30px -4px rgba(122, 139, 127, 0.3),
+			0 12px 50px -6px rgba(213, 206, 197, 0.4),
+			0 0 80px 15px rgba(245, 241, 237, 0.9);
+		background: linear-gradient(to bottom, #ffffff 0%, #fcfbf9 100%);
 	}
 
 	.date-image {
