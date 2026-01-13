@@ -53,7 +53,7 @@ const it = {
 				address: 'Strada Comunale di Recenza, 53018 Siena SI',
 				time: 'A seguire',
 				description:
-					'Dopo la cerimonia, festeggeremo insieme in questa splendida location. Musica, balli e tanta allegria per celebrare il nostro amore!',
+					'Dopo la cerimonia, festeggeremo insieme in questa splendida location. Musica, buon cibo e tanta allegria per celebrare il nostro amore!',
 			},
 		},
 		honeymoon: {
