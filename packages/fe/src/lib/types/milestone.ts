@@ -15,6 +15,8 @@ export interface WeddingLocation {
 	time: string;
 	description: string;
 	imageUrl?: string;
+	link?: string;
+	linkText?: string;
 }
 
 export interface WeddingMilestone extends BaseMilestone {

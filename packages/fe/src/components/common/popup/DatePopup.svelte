@@ -69,8 +69,7 @@
 		<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
 		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 		<div
-			class="relative w-full {sizeClasses[size]} animate-fadeIn flex max-h-[90vh] flex-col rounded-lg"
-			style="background: #FAFAF8; box-shadow: 0 20px 40px rgba(122, 139, 127, 0.15); border: 1px solid #E8E5E1;"
+			class="relative w-full {sizeClasses[size]} animate-fadeIn date-popup flex max-h-[90vh] flex-col rounded-lg"
 			onclick={handlePopupClick}
 			onkeydown={handlePopupKeydown}
 			role="document"
@@ -132,5 +131,12 @@
 
 	.animate-fadeIn {
 		animation: fadeIn 0.2s ease-out;
+	}
+
+	.date-popup {
+		background: #fafaf8;
+		box-shadow: 0 20px 40px rgba(122, 139, 127, 0.15);
+		border: 1px solid #e8e5e1;
+		max-height: 85vh;
 	}
 </style>

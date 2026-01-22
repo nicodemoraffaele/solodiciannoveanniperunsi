@@ -468,6 +468,8 @@
 					time: wedding.church.time(),
 					description: wedding.church.description(),
 					imageUrl: `${base}/PieveSanGiovanni_stilizzata.png`,
+					link: `${base}/cerimonia`,
+					linkText: 'Maggiori informazioni',
 				}}
 				reception={{
 					title: wedding.reception.title(),
@@ -476,6 +478,8 @@
 					time: wedding.reception.time(),
 					description: wedding.reception.description(),
 					imageUrl: `${base}/borgo_verde_1.png`,
+					link: `${base}/ricevimento`,
+					linkText: 'Maggiori informazioni',
 				}}
 			/>
 		{:else if milestoneId === 'honeymoon'}

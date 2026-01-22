@@ -48,6 +48,9 @@
 			</div>
 
 			<p class="mt-4 text-base leading-relaxed text-gray-700">{church.description}</p>
+			<p class="link pb-2">
+				<a href={church.link}>{church.linkText}</a>
+			</p>
 		</div>
 
 		<!-- Reception Section -->
@@ -77,6 +80,9 @@
 			</div>
 
 			<p class="mt-4 text-base leading-relaxed text-gray-700">{reception.description}</p>
+			<p class="link pb-2">
+				<a href={reception.link}>{reception.linkText}</a>
+			</p>
 		</div>
 	</div>
 
@@ -107,5 +113,10 @@
 
 	.color-champagne {
 		color: #c17557;
+	}
+
+	.link a {
+		color: #5a6b5f;
+		text-decoration: underline;
 	}
 </style>
