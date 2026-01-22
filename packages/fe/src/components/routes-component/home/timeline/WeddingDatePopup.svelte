@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import DatePopup from '$components/common/popup/DatePopup.svelte';
 	import type { WeddingLocation } from '$lib/types/milestone';
 
@@ -13,6 +14,15 @@
 	}
 
 	let { isOpen = false, onClose, date, title, description, church, reception }: Props = $props();
+
+	const handleLinkClick = (e: MouseEvent, href: string | undefined) => {
+		e.preventDefault();
+		e.stopPropagation();
+		if (href) {
+			onClose();
+			goto(href);
+		}
+	};
 </script>
 
 <DatePopup {isOpen} {onClose} {title} {date} size="large">
@@ -48,9 +58,11 @@
 			</div>
 
 			<p class="mt-4 text-base leading-relaxed text-gray-700">{church.description}</p>
-			<p class="link pb-2">
-				<a href={church.link}>{church.linkText}</a>
-			</p>
+			{#if church.link}
+				<p class="link pb-2">
+					<a href={church.link} onclick={(e) => handleLinkClick(e, church.link)}>{church.linkText}</a>
+				</p>
+			{/if}
 		</div>
 
 		<!-- Reception Section -->
@@ -80,9 +92,12 @@
 			</div>
 
 			<p class="mt-4 text-base leading-relaxed text-gray-700">{reception.description}</p>
-			<p class="link pb-2">
-				<a href={reception.link}>{reception.linkText}</a>
-			</p>
+			{#if reception.link}
+				<p class="link pb-2">
+					<a href={reception.link} onclick={(e) => handleLinkClick(e, reception.link)}>{reception.linkText}</a
+					>
+				</p>
+			{/if}
 		</div>
 	</div>
 
@@ -98,6 +113,7 @@
 		</p>
 		<a
 			href="/rsvp"
+			onclick={(e) => handleLinkClick(e, '/rsvp')}
 			class="inline-block rounded-full px-8 py-3 text-lg font-semibold text-white transition-all hover:shadow-lg"
 			style="background: linear-gradient(135deg, #7A8B7F 0%, #8B9F8C 100%); font-family: 'Cormorant Garamond', serif;"
 		>
