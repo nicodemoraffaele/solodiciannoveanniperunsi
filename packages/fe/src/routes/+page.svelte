@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Solo Diciannove Anni Per Un Si</title>
+	<title>Sara e Raffaele - Solo Diciannove Anni Per Un Si</title>
 </svelte:head>
 
 <div class="min-h-screen overflow-hidden">
