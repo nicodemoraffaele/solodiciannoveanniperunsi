@@ -17,6 +17,7 @@
 		{ href: `${base}/cerimonia`, label: 'Cerimonia' },
 		{ href: `${base}/ricevimento`, label: 'Ricevimento' },
 		{ href: `${base}/rsvp`, label: 'RSVP' },
+		{ href: `${base}/regalo`, label: 'Il regalo più grande' },
 	];
 
 	const isActive = (href: string) => {
