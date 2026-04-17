@@ -57,7 +57,7 @@ const it = {
 			},
 		},
 		honeymoon: {
-			date: 'Settembre 2026',
+			date: 'Ottobre 2026',
 			title: 'Prossima tappa: ???',
 			location: 'Prossima tappa: ???',
 			description:
