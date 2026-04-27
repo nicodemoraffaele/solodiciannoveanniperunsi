@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
+	import { LL } from '$lib/i18n/i18n-svelte';
+	import { photosAvailable } from '$lib/utils/photosGate';
 
 	let isOpen = $state(false);
 
@@ -12,13 +14,14 @@
 		isOpen = false;
 	};
 
-	const menuItems = [
+	const menuItems = $derived([
 		{ href: `${base}/`, label: 'Home' },
 		{ href: `${base}/cerimonia`, label: 'Cerimonia' },
 		{ href: `${base}/ricevimento`, label: 'Ricevimento' },
 		{ href: `${base}/rsvp`, label: 'RSVP' },
 		{ href: `${base}/regalo`, label: 'Il regalo più grande' },
-	];
+		...(photosAvailable() ? [{ href: `${base}/foto`, label: $LL.gallery.menuLabel() }] : []),
+	]);
 
 	const isActive = (href: string) => {
 		const currentPath = $page.url.pathname;

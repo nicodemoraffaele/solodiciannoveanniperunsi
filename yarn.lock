@@ -650,6 +650,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rollup/rollup-linux-x64-gnu@npm:^4.60.2":
+  version: 4.60.2
+  resolution: "@rollup/rollup-linux-x64-gnu@npm:4.60.2"
+  checksum: 5497f0857a888157ef7237910fa5b1f96c37cb5b845c94de53e81b422341a86d3dfe5eb9f89840efb5657981ff58c078602e7c5163ef105e0a690817899fa887
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
 "@rollup/rollup-linux-x64-musl@npm:4.28.1":
   version: 4.28.1
   resolution: "@rollup/rollup-linux-x64-musl@npm:4.28.1"
@@ -3760,6 +3768,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "project@workspace:."
   dependencies:
+    "@rollup/rollup-linux-x64-gnu": ^4.60.2
     "@types/eslint-config-prettier": ^6.11.3
     "@typescript-eslint/eslint-plugin": ^8.18.1
     "@typescript-eslint/parser": ^8.18.1

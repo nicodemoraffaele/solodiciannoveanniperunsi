@@ -79,6 +79,31 @@ const it = {
 		copyIban: 'Copia IBAN',
 		ibanCopied: 'IBAN copiato!',
 	},
+
+	// Gallery / Share the love
+	gallery: {
+		menuLabel: 'Share the love',
+		pageTitle: 'Share the love - Sara e Raffaele',
+		heading: 'Share the love',
+		intro: 'Carica le tue foto del nostro matrimonio e riviviamole tutti insieme.',
+		preReleaseTitle: 'A presto!',
+		preReleaseMessage: 'Le foto saranno disponibili dal giorno del matrimonio.',
+		takePhoto: 'Scatta una foto',
+		uploadFromGallery: 'Carica dalle foto',
+		uploadingLabel: 'Caricamento in corso',
+		uploadProgress: '{current} di {total}',
+		uploadSuccess: 'Foto caricata!',
+		uploadErrorGeneric: 'Errore nel caricamento. Riprova.',
+		uploadErrorTooLarge: 'File troppo grande (massimo 15 MB)',
+		uploadErrorWrongType: 'Formato non supportato',
+		emptyState: 'Ancora nessuna foto. Sii il primo a caricarne una!',
+		loadingPhotos: 'Caricamento foto...',
+		listError: 'Impossibile caricare le foto. Riprova.',
+		refresh: 'Aggiorna',
+		close: 'Chiudi',
+		previous: 'Precedente',
+		next: 'Successiva',
+	},
 } satisfies BaseTranslation;
 
 export default it;
