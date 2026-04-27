@@ -1,20 +1,20 @@
 {
-  "permissions": {
-    "allow": [
-      "Bash(tree:*)",
-      "Bash(yarn typesafe-i18n:*)",
-      "Bash(yarn install)",
-      "Bash(yarn install:*)",
-      "WebFetch(domain:github.com)",
-      "Bash(npm install:*)",
-      "Bash(yarn workspace fe add:*)",
-      "Bash(yarn workspace:*)",
-      "Bash(yarn add:*)",
-      "Bash(git *)",
-      "Bash(cat /mnt/c/Users/efebia/Documents/raffaele/Personale/ComeDiventeremoPoveri/website/solodiciannoveanniperunsi/.github/workflows/*.yml)",
-      "Bash(curl *)"
-    ],
-    "deny": [],
-    "ask": []
-  }
+	"permissions": {
+		"allow": [
+			"Bash(tree:*)",
+			"Bash(yarn typesafe-i18n:*)",
+			"Bash(yarn install)",
+			"Bash(yarn install:*)",
+			"WebFetch(domain:github.com)",
+			"Bash(npm install:*)",
+			"Bash(yarn workspace fe add:*)",
+			"Bash(yarn workspace:*)",
+			"Bash(yarn add:*)",
+			"Bash(git *)",
+			"Bash(cat /mnt/c/Users/efebia/Documents/raffaele/Personale/ComeDiventeremoPoveri/website/solodiciannoveanniperunsi/.github/workflows/*.yml)",
+			"Bash(curl *)"
+		],
+		"deny": [],
+		"ask": []
+	}
 }
